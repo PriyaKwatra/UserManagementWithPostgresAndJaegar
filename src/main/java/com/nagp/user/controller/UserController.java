@@ -20,7 +20,7 @@ public class UserController {
 
 	@GetMapping(value = "/{userId}")
 	com.nagp.user.entities.User getUser(@PathVariable(name = "userId") String userId) {
-		return userHandler.getByUserId(userId).isPresent() ? userHandler.getByUserId(userId).get() : null;
+		return userHandler.getByUserId(userId);
 	}
 
 }
